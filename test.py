@@ -33,11 +33,11 @@ else:
         os.system(cmd)
 
 if opts.class_name is None:
-    atlas_generation_cmd = "python src/stage1_neural_atlas.py --vid_name {}".format(video_base_name)
+    atlas_generation_cmd = "python stage1_neural_atlas.py --vid_name {}".format(video_base_name)
     os.system(atlas_generation_cmd)
 else:
-    atlas_generation_cmd = "python src/stage1_neural_atlas_seg.py --vid_name {} --class_name {}".format(video_base_name, opts.class_name)
+    atlas_generation_cmd = "python stage1_neural_atlas_seg.py --vid_name {} --class_name {}".format(video_base_name, opts.class_name)
     os.system(atlas_generation_cmd)
 
-neural_filter_and_refinement_cmd = "python src/neural_filter_and_refinement.py --video_name {} --fps {}".format(video_base_name, opts.fps)
+neural_filter_and_refinement_cmd = "python neural_filter_and_refinement.py --video_name {} --fps {}".format(video_base_name, opts.fps)
 os.system(neural_filter_and_refinement_cmd)
