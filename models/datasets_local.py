@@ -7,7 +7,7 @@ import torch
 import torch.utils.data as data
 
 ### custom lib
-import src.models.utils as utils
+import models.utils as utils
 
 class RandomCrop(object):
     def __init__(self, image_size, crop_size):

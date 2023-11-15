@@ -345,7 +345,7 @@ if __name__ == "__main__":
     select_gpu = args.gpu
     os.environ["CUDA_VISIBLE_DEVICES"] = select_gpu
     
-    config_path = "src/config/%s" % args.config
+    config_path = "config/%s" % args.config
     vid_path = os.path.join(args.root, args.vid_name)
 
     args.vid_path = vid_path
